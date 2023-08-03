@@ -1,0 +1,47 @@
+這邊使用的是公開資料，關於銀行的定存產品銷售數據
+
+來源為 
+
+[Moro et al., 2011] S. Moro, R. Laureano and P. Cortez. Using Data Mining for Bank Direct Marketing: An Application of the CRISP-DM Methodology. 
+  In P. Novais et al. (Eds.), Proceedings of the European Simulation and Modelling Conference - ESM'2011, pp. 117-121, Guimarães, Portugal, October, 2011. EUROSIS.
+  
+  
+概述：
+
+該數據與葡萄牙一家銀行機構的直接營銷活動，銷售活動是基於電話銷售，可能對同一客戶進行多次聯繫。並使用資料判斷是否會訂閱該產品（銀行定期存款）。
+
+資料的銀行客戶數據 : 
+
+銀行客戶數據：
+1 - 年齡（數值）
+2 - 職業：職業類型（類別： "admin。"，"unknown"，"unemployed"，"management"，"housemaid"，"entrepreneur"，"student"，
+"blue-collar"，"self-employed"，"retired"，"technician"，"services"）
+3 - 婚姻狀況：婚姻狀態（類別： "married"，"divorced"，"single"；注意："divorced"表示離婚或喪偶）
+4 - 教育（類別： "unknown"，"secondary"，"primary"，"tertiary"）
+5 - 默認：是否有信用違約？（二進制： "yes"，"no"）
+6 - 平均年度余額，以歐元計算（數值）
+7 - 房屋貸款：是否有住房貸款？（二進制： "yes"，"no"）
+8 - 考察：是否有個人貸款？（二進制： "yes"，"no"）
+
+ 1 - 年齡 age (numeric)
+ 2 - 工作 job : type of job (categorical: "admin.","unknown","unemployed","management","housemaid","entrepreneur","student",
+                                       "blue-collar","self-employed","retired","technician","services") 
+ 3 - 婚姻狀態 marital : marital status (categorical: "married","divorced","single"; note: "divorced" means divorced or widowed)
+ 4 - 教育程度 education (categorical: "unknown","secondary","primary","tertiary")
+ 5 - 是否有信用違約 default: has credit in default? (binary: "yes","no")
+ 6 - 平均年底帳戶餘額 balance: average yearly balance, in euros (numeric) 
+ 7 - 房屋貸款 housing: has housing loan? (binary: "yes","no")
+ 8 - 貸款 loan: has personal loan? (binary: "yes","no")
+ 
+ # 有關於最後一次的聯繫時間
+ # related with the last contact of the current campaign:
+ 9 - 上次是用什麼方式電訪的 contact: contact communication type (categorical: "unknown","telephone","cellular") 
+ 10 - day: last contact day of the month (numeric)
+ 11 - month: last contact month of year (categorical: "jan", "feb", "mar", ..., "nov", "dec")
+ 12 - duration: last contact duration, in seconds (numeric)
+ # other attributes:
+ 13 - campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)
+ 14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)
+ 15 - 過去曾經訪問幾次 previous: number of contacts performed before this campaign and for this client (numeric)
+ 16 -  outcome: outcome of the previous marketing campaign (categorical: "unknown","other","failure","success")
+ 17 - 是否有成功 y - has the client subscribed a term deposit? (binary: "yes","no")

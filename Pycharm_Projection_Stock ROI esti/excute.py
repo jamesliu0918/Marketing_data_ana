@@ -8,6 +8,8 @@
 import mathproj
 import mathproj.data_find
 import mathproj.trade
+
+
 data = mathproj.data_find.catch("2409",2019,2,2019,3)
 #資料抓取為  股號str  日期範圍 起始年>月  結束年 月
 cd = data['close']
